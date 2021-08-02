@@ -1,0 +1,10 @@
+#!/bin/bash
+
+param='hello shell'
+echo $param
+param=${param/e/E}
+echo "after \${param/e/E}"
+echo ${param}
+param=${param//l/L}
+echo after \${param//l/L}
+echo ${param}

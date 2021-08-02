@@ -1,0 +1,276 @@
+#!/bin/bash
+
+echo '################################'
+echo '+'
+echo '################################'
+
+param=hello
+echo param is $param
+param_result=${param+shell}
+echo 'after ${param+shell}'
+echo param is $param
+echo param_result is $param_result
+
+echo '--------------------------------'
+
+empty=
+echo empty is $empty
+empty_result=${empty+shell}
+echo 'after ${empty+shell}'
+echo empty is $empty
+echo empty_result is $empty_result
+
+echo '--------------------------------'
+
+echo notdefined is $notdefined
+notdefined_result=${notdefined+shell}
+echo 'after ${notdefined+shell}'
+echo notdefined is $notdefined
+echo notdefined_result is $notdefined_result
+
+
+echo
+echo
+echo
+
+
+
+echo '################################'
+echo ':+'
+echo '################################'
+
+param=hello
+echo param is $param
+param_result=${param:+shell}
+echo 'after ${param:+shell}'
+echo param is $param
+echo param_result is $param_result
+
+echo '--------------------------------'
+
+empty=
+echo empty is $empty
+empty_result=${empty:+shell}
+echo 'after ${empty:+shell}'
+echo empty is $empty
+echo empty_result is $empty_result
+
+echo '--------------------------------'
+
+echo notdefined1 is $notdefined1
+notdefined1_result=${notdefined1:+shell}
+echo 'after ${notdefined1:+shell}'
+echo notdefined1 is $notdefined1
+echo notdefined1_result is $notdefined1_result
+
+
+echo
+echo
+echo
+
+
+echo '################################'
+echo '='
+echo '################################'
+
+
+param=hello
+echo param is $param
+param_result=${param=shell}
+echo 'after ${param=shell}'
+echo param is $param
+echo param_result is $param_result
+
+echo '--------------------------------'
+
+empty=
+echo empty is $empty
+empty_result=${empty=shell}
+echo 'after ${empty=shell}'
+echo empty is $empty
+echo empty_result is $empty_result
+
+echo '--------------------------------'
+
+echo notdefined2 is $notdefined2
+notdefined2_result=${notdefined2=shell}
+echo 'after ${notdefined2=shell}'
+echo notdefined2 is $notdefined2
+echo notdefined2_result is $notdefined2_result
+
+
+echo
+echo
+echo
+
+
+echo '################################'
+echo ':='
+echo '################################'
+
+
+param=hello
+echo param is $param
+param_result=${param:=shell}
+echo 'after ${param:=shell}'
+echo param is $param
+echo param_result is $param_result
+
+echo '--------------------------------'
+
+empty=
+echo empty is $empty
+empty_result=${empty:=shell}
+echo 'after ${empty:=shell}'
+echo empty is $empty
+echo empty_result is $empty_result
+
+echo '--------------------------------'
+
+echo notdefined3 is $notdefined3
+notdefined3_result=${notdefined3:=shell}
+echo 'after ${notdefined3:=shell}'
+echo notdefined3 is $notdefined3
+echo notdefined3_result is $notdefined3_result
+
+
+echo
+echo
+echo
+
+
+echo '################################'
+echo '-'
+echo '################################'
+
+
+param=hello
+echo param is $param
+param_result=${param-shell}
+echo 'after ${param-shell}'
+echo param is $param
+echo param_result is $param_result
+
+echo '--------------------------------'
+
+empty=
+echo empty is $empty
+empty_result=${empty-shell}
+echo 'after ${empty-shell}'
+echo empty is $empty
+echo empty_result is $empty_result
+
+echo '--------------------------------'
+
+echo notdefined4 is $notdefined4
+notdefined4_result=${notdefined4-shell}
+echo 'after ${notdefined4-shell}'
+echo notdefined4 is $notdefined4
+echo notdefined4_result is $notdefined4_result
+
+
+echo
+echo
+echo
+
+
+echo '################################'
+echo ':-'
+echo '################################'
+
+
+param=hello
+echo param is $param
+param_result=${param:-shell}
+echo 'after ${param:-shell}'
+echo param is $param
+echo param_result is $param_result
+
+echo '--------------------------------'
+
+empty=
+echo empty is $empty
+empty_result=${empty:-shell}
+echo 'after ${empty:-shell}'
+echo empty is $empty
+echo empty_result is $empty_result
+
+echo '--------------------------------'
+
+echo notdefined5 is $notdefined5
+notdefined5_result=${notdefined5:-shell}
+echo 'after ${notdefined5:-shell}'
+echo notdefined5 is $notdefined5
+echo notdefined5_result is $notdefined5_result
+
+
+echo
+echo
+echo
+
+
+echo '################################'
+echo '?'
+echo '################################'
+
+
+param=hello
+echo param is $param
+param_result=${param?shell}
+echo 'after ${param?shell}'
+echo param is $param
+echo param_result is $param_result
+
+echo '--------------------------------'
+
+empty=
+echo empty is $empty
+empty_result=${empty?shell}
+echo 'after ${empty?shell}'
+echo empty is $empty
+echo empty_result is $empty_result
+
+echo '--------------------------------'
+
+echo notdefined6 is $notdefined6
+# this call error, to make command below could be execute, so we comment it
+#notdefined6_result=${notdefined6?shell}
+echo 'after ${notdefined6?shell}'
+echo notdefined6 is $notdefined6
+echo notdefined6_result is $notdefined6_result
+
+
+echo
+echo
+echo
+
+
+echo '################################'
+echo ':?'
+echo '################################'
+
+
+param=hello
+echo param is $param
+param_result=${param:?shell}
+echo 'after ${param:?shell}'
+echo param is $param
+echo param_result is $param_result
+
+echo '--------------------------------'
+
+empty=
+echo empty is $empty
+# this call error, to make command below could be execute, so we comment it
+#empty_result=${empty:?shell}
+echo 'after ${empty:?shell}'
+echo empty is $empty
+echo empty_result is $empty_result
+
+echo '--------------------------------'
+
+echo notdefined7 is $notdefined7
+notdefined7_result=${notdefined7:?shell}
+echo 'after ${notdefined7:?shell}'
+echo notdefined7 is $notdefined7
+echo notdefined7_result is $notdefined7_result

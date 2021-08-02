@@ -1,0 +1,16 @@
+#!/bin/bash
+
+parameter=full_full_full_yk681_go_wcdma-user-user-userdebug
+echo $parameter
+parameter=${parameter#*full_}
+echo "after #*full_"
+echo $parameter
+parameter=${parameter##*full_}
+echo "after ##*full_"
+echo $parameter
+parameter=${parameter%-user*}
+echo "after %-user*"
+echo $parameter
+parameter=${parameter%%-user*}
+echo "after %%-user*"
+echo $parameter

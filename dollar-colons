@@ -1,0 +1,10 @@
+#!/bin/bash
+
+param=nobody
+echo $param
+param=${param:0:5}
+echo "after \${param:0:5}"
+echo $param
+param=${param:2:2}
+echo "after \${param:2:2}"
+echo $param

@@ -1,0 +1,109 @@
+#!/bin/bash
+
+echo '################################'
+echo '              file              '
+echo '################################'
+
+echo operator#and% is a exist file, but operator#% is not
+
+if [ -f operator#and% ]
+then
+	echo '[-f operator#and%] is true, means file exist'
+fi
+
+if [ ! -f operator#% ] ; then
+	echo '[ ! -f operator#%] is true, means file not exist'
+fi
+
+if [ -s operator#and% ] ; then
+	echo '[ -s operator#%] is true, means file is not empty'
+fi
+
+if [ ! -s empty-file ] ; then
+	echo '[ ! -s empty-file ] is true, means file is empty'
+fi
+
+echo
+echo
+echo
+echo
+echo
+
+
+
+
+
+echo '################################'
+echo '             command            '
+echo '################################'
+
+if echo 'just echo somethig'
+then
+	echo command result 0 means true in 'shell'
+fi
+if cat operator#%
+then
+	echo command result 0 means true in 'shell'
+fi
+
+echo
+echo
+echo
+echo
+echo
+
+
+
+
+
+echo '################################'
+echo '             string             '
+echo '################################'
+
+str=hello
+echo str is [$str]
+
+if [ $str ] ; then
+	echo 'if [ str ] is true, means str is not empty or blank'
+fi
+
+# in if [ -n "" ], "" is required
+if [ -n "$str" ] ; then
+	echo 'if [ -n str ] is true, means str length is not 0'
+fi
+
+if [ ! -z $str ] ; then
+	echo 'if [ ! -z str ] is true, means str is not empty or blank'
+fi
+
+str=
+echo str is [${str}]
+
+if [ ! $str ] ; then
+        echo 'if [ ! str ] is true, means str is empty or blank'
+fi
+
+# in if [ -n "" ], "" is required
+if [ ! -n "$str" ] ; then
+        echo 'if [ ! -n str ] is true, means str length is 0'
+fi
+
+if [ -z $str ] ; then
+        echo 'if [ -z str ] is true, means str is empty or blank'
+fi
+
+str=' '
+echo str is [$str]
+
+if [ ! $str ] ; then
+        echo 'if [ ! str ] is true, means str is empty or blank'
+fi
+
+# in if [ -n "" ], "" is required
+if [ -n "$str" ] ; then
+        echo 'if [ -n str ] is true, means str length is not 0'
+fi
+
+if [ -z $str ] ; then
+        echo 'if [ -z str ] is true, means str is empty or blank'
+fi
